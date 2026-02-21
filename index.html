@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wort Trainer</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4CAF50">
+
+<style>
+body { font-family: Arial; padding:20px; text-align:center; }
+button { padding:10px; margin:5px; border:none; border-radius:6px; background:#4CAF50; color:white; }
+</style>
+</head>
+<body>
+
+<h1>Wort Trainer</h1>
+
+<input type="text" id="wordInput" placeholder="Neues Wort">
+<button onclick="addWord()">Speichern</button>
+
+<br><br>
+
+<button onclick="speakRandomWord()">Zufälliges Wort</button>
+<button onclick="resetSession()">Session neu starten</button>
+
+<br><br>
+
+<input type="file" id="csvFile" accept=".csv">
+<button onclick="importCSV()">CSV importieren</button>
+
+<h3 id="lastWord"></h3>
+<ul id="wordList"></ul>
+
+<script src="app.js"></script>
+
+</body>
+</html>
